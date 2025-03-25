@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAHIT-TECH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Anton', sans-serif;
+      background: url('BACK2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    body > *:not(.overlay) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-bar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .back-button {
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      background-color: #e0e0e0;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ccc;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 4rem;
+      margin: 20px 0 10px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .intro {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      height: 300px;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card.card1 {
+      background-image: url('JENISMJ.jpg');
+    }
+
+    .card.card2 {
+      background-image: url('ALAT.jpg');
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-label {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-top: 10px;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- 顶部返回键区域 -->
+  <div class="top-bar">
+    <a href="javascript:history.back()" class="back-button">← Kembali</a>
+  </div>
+
+  <h1>JAHIT-TECH</h1>
+  <p class="intro">Klik pada salah satu kad di bawah untuk meneroka dunia jahitan!</p>
+
+  <div class="card-container">
+    <div>
+      <a href="JENIS MATA JAHITAN.html">
+        <div class="card card1"></div>
+      </a>
+      <div class="card-label">JENIS MATA JAHITAN</div>
+    </div>
+
+    <div>
+      <a href="ALATAN JAHITAN.html">
+        <div class="card card2"></div>
+      </a>
+      <div class="card-label">ALATAN JAHITAN</div>
+    </div>
+  </div>
+</body>
+</html>

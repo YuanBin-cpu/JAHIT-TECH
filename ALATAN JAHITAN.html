@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alatan Jahitan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Anton', sans-serif;
+      background-image: url('BACK 3.jpg'); /* Ganti dengan laluan sebenar gambar latar */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      background-color: #e0e0e0;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ccc;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #333;
+      margin: 60px 0 30px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+    }
+
+    .card-wrapper {
+      width: 360px;
+      text-align: center;
+    }
+
+    .card {
+      width: 100%;
+      height: 320px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      background-color: rgba(255,255,255,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .card-front img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      font-size: 2.5rem;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .card-title {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="javascript:history.back()" class="back-button">← Kembali</a>
+  <h1>Alatan Jahitan</h1>
+
+  <div class="card-container">
+
+    <!-- Setiap kad satu alatan -->
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="PITA UKUR.jpg" alt="Pita Ukur">
+          </div>
+          <div class="card-back">
+            Mengukur fabrik atau mengambil ukuran badan.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Pita Ukur</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="PEMBARIS.jpg" alt="Pembaris">
+          </div>
+          <div class="card-back">
+           Mengukur dan menandakan pola.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Pembaris</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="KAPUR.jpg" alt="Kapur Tukang Jahit">
+          </div>
+          <div class="card-back">
+            Membuat tanda pada fabrik.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Kapur Tukang Jahit</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="RODA SURIH.jpg" alt="Roda Surih">
+          </div>
+          <div class="card-back">
+            Memindahkan tanda pola ke fabrik.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Roda Surih</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="KERTAS KARBON.jpg" alt="Kertas Karbon">
+          </div>
+          <div class="card-back">
+            Memindahkan tanda pola, garisan dan motif ke fabrik dengan menggunakan roda surih.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Kertas Karbon Tukang Jahit</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="JARUM PENITI.jpg" alt="Jarum Peniti">
+          </div>
+          <div class="card-back">
+            - Menyemat pola pada fabrik. <br>
+            - Menetapkan dua atau lebih kepingan fabrik sebelum menjahit.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Jarum Peniti</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="JARUM JAHITAN.jpg" alt="Jarum Jahit Tangan">
+          </div>
+          <div class="card-back">
+            Menjahit fabrik.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Jarum Jahit Tangan</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="MESIN JAHIT MINI.jpg" alt="Mesin Jahit Mini">
+          </div>
+          <div class="card-back">
+            - Menjahit fabrik. <br>
+            - Menggunakan elektrik untuk berfungsi.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Mesin Jahit Mini</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="GUNTING FABRIK.jpg" alt="Gunting Fabrik">
+          </div>
+          <div class="card-back">
+            Menggunting fabrik.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Gunting Fabrik</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="GUNTING KERTAS.jpg" alt="Gunting Kertas">
+          </div>
+          <div class="card-back">
+            Memotong kertas bagi membentuk pola.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Gunting Kertas</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="MESIN JAHIT TANGAN.jpg" alt="Mesin Jahit Tangan">
+          </div>
+          <div class="card-back">
+            - Menjahit fabrik. <br>
+            - Digunakan secara manual.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Mesin Jahit Tangan</div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="PERENTAS.jpg" alt="Peretas Jahitan">
+          </div>
+          <div class="card-back">
+            Meretas dan menanggalkan mata jahitan serta memotong lubang butang.
+          </div>
+        </div>
+      </div>
+      <div class="card-title">Peretas Jahitan</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

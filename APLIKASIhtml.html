@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>JAHIT-TECH</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --button-width: 80vw;
+      --button-font-size: 1.5rem;
+      --heading-font-size: 8vw;
+      --subtitle-font-size: 4.5vw;
+    }
+
+    html, body {
+      font-family: 'Anton', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: auto;
+    }
+
+    body {
+      background-image: url('BACKGROUND.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+    }
+
+    .logo {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: var(--heading-font-size);
+      margin: 10px 0;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .subtitle {
+      font-size: var(--subtitle-font-size);
+      font-weight: normal;
+      text-transform: uppercase;
+      max-width: 90%;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .button {
+      display: inline-block;
+      width: var(--button-width);
+      padding: 1.2em 0;
+      font-size: var(--button-font-size);
+      color: #fff;
+      background-color: rgba(0, 123, 255, 0.85);
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      margin: 10px;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: rgba(0, 100, 210, 1);
+      transform: scale(1.06);
+    }
+
+    @media (min-width: 769px) {
+      :root {
+        --button-width: 360px;
+        --button-font-size: 2em;
+        --heading-font-size: 3.8em;
+        --subtitle-font-size: 1.6em;
+      }
+
+      .logo {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+
+    <img src="LOGO.jpg" alt="Logo JAHIT-TECH" class="logo" />
+
+    <h1>JAHIT - TECH</h1>
+    <div class="subtitle">APLIKASI PEMBELAJARAN JAHITAN MESRA INKLUSIF</div>
+
+    <a href="JAHIT-TECH.html" class="button">📘 Mula Pembelajaran</a>
+    <a href="KUIZ INTERAKTIF.html" class="button">🧠 Kuiz Interaktif</a>
+
+  </div>
+
+</body>
+</html>
